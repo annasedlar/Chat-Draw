@@ -1,4 +1,16 @@
+body{
+	background-color: lightskyblue;
+}
 canvas{
-	border: 3px solid limegreen;
-	background-color: lightblue;
+	border: 3px solid blue;
+	background-color: whitesmoke;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+userChats{
+	border: 1px solid black
+}
+
+.not_canvas{
+	float: right;
 }

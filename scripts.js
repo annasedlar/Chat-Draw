@@ -38,8 +38,8 @@ var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 
 // set up base options
-var color = "#00FF00";
-var thickness = 10;
+var color = "#FF0000";
+var thickness = 7;
 var mouseDown = false; 
 var mousePosition = {};
 var lastMousePosition = null;
