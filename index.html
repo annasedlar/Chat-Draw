@@ -1,0 +1,46 @@
+<!-- this is what is getting sent to the browser from the (our) server - we can write regular js here -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat-Draw</title>	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Anna Sedlar</h1>
+		<p> whats up</p>
+
+		<div class="col-sm-3">
+				<h3>Enter your message here</h3>
+				<form onsubmit="sendChatMessage()">
+					<input type="text" id="chat-message"/>
+					<input class="btn btn-primary" type="submit" value="send!" />
+				</form>
+		</div>
+
+			<div id="userNames" class="col-sm-3">
+				<!-- Our usernames will go here as they show up -->
+			</div>
+
+			<div id="userChats" class="col-sm-6">
+				<!-- All chats go here as they show up -->
+			</div>
+
+			<div class="tool-bar col-sm-12">
+				<input type="color" id="color-picker"/>
+				<label>Choose your marker thickness</label>
+				<input type="number" id="thickness" placeholder="10"/>
+			</div>
+			<div class="col-sm-12">
+				<canvas id="canvas" width='500px' height="500px"></canvas>
+			</div>
+
+	</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
+
+</body>
+</html>

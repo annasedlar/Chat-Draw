@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/annasedlar/Chat-Draw/issues"
   },
-  "homepage": "https://github.com/annasedlar/Chat-Draw#readme"
+  "homepage": "https://github.com/annasedlar/Chat-Draw#readme",
+  "dependencies": {
+    "connect": "^3.5.0",
+    "serve-static": "^1.11.2",
+    "socket.io": "^1.7.2"
+  }
 }
