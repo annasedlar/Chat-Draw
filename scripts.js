@@ -62,6 +62,7 @@ canvas.addEventListener('mousedown', (event)=>{
 canvas.addEventListener('mouseup', (event)=>{
 	// console.log(event);
 	mouseDown = false;
+	lastMousePosition = null;
 });
 
 canvas.addEventListener('mousemove', (event)=>{
@@ -72,7 +73,8 @@ canvas.addEventListener('mousemove', (event)=>{
 		mousePosition = {
 			x: magicBrushX,
 			y: magicBrushY
-		}
+		} //add a reset to mousedown so it doesn't connect lines
+
 
 		if(lastMousePosition !== null){
 			context.strokeStyle = color;
@@ -97,6 +99,7 @@ canvas.addEventListener('mousemove', (event)=>{
 			x: mousePosition.x, 
 			y: mousePosition.y
 		}
+
 		socketio.emit('drawingToServer', drawingDataForServer);
 
 		socketio.on('drawingToClients', (drawingData)=>{
