@@ -1,8 +1,8 @@
 //this is the apache way
 //we use 8081 to serve our files, but we use 8081 to connect with our socket machinese
-var socketio = io.connect('http://127.0.0.1:8080')
+var socketio = io.connect('http://35.164.11.149:8080')
 
-var socketio = io.connect('http://127.0.0.1:8080');
+var socketio = io.connect('http://35.164.11.149:8080');
 
 socketio.on('users', (socketUsers)=>{
 	console.log(socketUsers)
