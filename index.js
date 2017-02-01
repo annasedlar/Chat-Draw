@@ -45,6 +45,7 @@ io.sockets.on('connect', (socket)=>{
 			date: new Date()
 		})
 	});
+
 	socket.on('drawingToServer', (drawingData)=>{
 		if(drawingData.lastMousePosition !== null){
 			io.sockets.emit('drawingToClients', drawingData);

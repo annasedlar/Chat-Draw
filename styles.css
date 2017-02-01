@@ -14,3 +14,28 @@ userChats{
 .not_canvas{
 	float: right;
 }
+.title{
+	text-align: center
+}
+
+.tool-bar{
+	margin-top: 50px;
+}
+
+ .message-room{
+	margin-top: 20px;
+	text-align: center;
+}
+
+#userNames{
+	height: 200px;
+	width: 100px;
+	overflow: scroll;
+	float: right;
+}
+
+#userChats{
+	height: 200px;
+	width: 100px;
+	overflow: scroll;
+}

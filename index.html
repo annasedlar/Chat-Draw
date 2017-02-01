@@ -9,33 +9,34 @@
 </head>
 
 <body>
-	<canvas id="canvas" width='500px' height="500px"></canvas>
-	<div class="not_canvas">
-		<h1>Anna Sedlar</h1>
-		<p> whats up</p>
+	<div class="col-xs-12 title">
+		<h1>Chat-Draw!</h1>
+		<h3>A Real-Time Interactive Chat Room</h3>
+		<h6>A responsive web app built by <a href="http://annasedlar.com">Anna Sedlar</a> using socket.io, Node.js, and HTML5 Canvas</h6>
+	</div>
 
-		<div class="col-sm-12">
-				<h3>Enter your message here</h3>
+	<canvas id="canvas" width='500px' height="500px"></canvas>
+
+	<div class="not_canvas">
+		<div class="tool-bar col-sm-6">
+			<input type="color" default="#ff0000" value="#ff0000" id="color-picker"/>
+			<label>Marker Thickness</label>
+			<input type="number" id="thickness" placeholder="10"/>
+		</div>
+
+		<div class="col-sm-6 message-room">
+				<h3>Send a message!</h3>
 				<form onsubmit="sendChatMessage()">
 					<input type="text" id="chat-message"/>
 					<input class="btn btn-primary" type="submit" value="send!" />
 				</form>
+				<div id="userChats" class="col-sm-3">
+					<!-- All chats go here as they show up -->
+				</div>
+				<div id="userNames" class="col-sm-3">
+					<!-- Our usernames will go here as they show up -->
+				</div>
 		</div>
-
-		<div class="tool-bar col-sm-6">
-			<input type="color" id="color-picker"/>
-			<label>Choose your marker thickness</label>
-			<input type="number" id="thickness" placeholder="10"/>
-		</div>
-
-		<div id="userNames" class="col-sm-3">
-			<!-- Our usernames will go here as they show up -->
-		</div>
-
-		<div id="userChats" class="col-sm-6">
-			<!-- All chats go here as they show up -->
-		</div>
-
 	</div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>

@@ -8,7 +8,7 @@ socketio.on('users', (socketUsers)=>{
 	console.log(socketUsers)
 	var newHTML ="";
 	socketUsers.map((currSocket, index)=>{
-		newHTML += "UserName: <li class='user'>" + currSocket.name + "</li>";
+		newHTML += "<div class='user'>" + currSocket.name + "</div>";
 	});
 	document.getElementById('userNames').innerHTML = newHTML; 
 })
@@ -25,7 +25,7 @@ function sendChatMessage(){
 	var messagetoSend = document.getElementById('chat-message').value; 
 	socketio.emit('messageToServer', {
 		message: messagetoSend,
-		name: "Anonymous"
+		name: "Anna"
 	});
 	document.getElementById('chat-message').value = "";
 }
